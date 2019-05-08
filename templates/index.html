@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digit recognizer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="{{ url_for('static', filename='jquery-3.4.1.js') }}"></script>
+    <script src="{{ url_for('static', filename='p5.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='p5.dom.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='p5.sound.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='sketch.js') }}"></script>
+
+    <script type=text/javascript>
+      $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+
+  </head>
+  <body>
+    <button id="predict">predict</button>
+    <button id="clear">clear</button>
+    <br/><br/><br/>
+    <center><b id="title">digit recognizer</b></center>
+    <p id="prediction">...</p>
+    <div class='footer'>
+      <center><p class='author'>by <a class='author' href="https://github.com/astraszab">@astraszab</a></p></center>
+    </div>
+  </body>
+</html>
